@@ -1,0 +1,10 @@
+[project]
+name = "demo1"
+version = "0.1.0"
+description = "项目1：电商 AI 客服 MVP"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.136.3",
+    "pydantic-settings>=2.14.1",
+    "sqlalchemy>=2.0.50",
+]

@@ -1,0 +1,2 @@
+"""SQLAlchemy model declarations."""
+
