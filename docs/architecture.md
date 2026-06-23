@@ -67,7 +67,7 @@ Repository boundary: backend/app/services/repository.py
 4. 普通消息由 `AnswerService` 做澄清/改写、混合检索和可选 LLM 生成，并写入 AI 消息和 `ai_call_logs`。
 5. 人工后台读取待接入 ticket，接入后会话进入 `human_active`。
 6. 人工回复写入同一会话，主动关闭后会话进入 `human_closed`。
-7. `check_idle_sessions.py` 或 `/admin/lifecycle/auto-close-idle` 只关闭 idle 的 `ai_active` 会话。
+7. `/admin/lifecycle/auto-close-idle` 只关闭 idle 的 `ai_active` 会话。
 8. 同一会话的新消息通过 WebSocket 广播给客户聊天端和人工客服工作台；`/events` 只保留为历史消息回放接口。
 
 ## API
@@ -92,9 +92,7 @@ Repository boundary: backend/app/services/repository.py
 - 已被接入或关闭的 ticket 不能重复接入。
 - 自动关闭前再次检查会话状态和 `last_message_at`，避免误关转人工或人工接待会话。
 
-## 测试
-
-核心业务以纯 Python 服务测试覆盖，数据库 repository 另有 SQLAlchemy 行为测试：
+## 行为边界
 
 - demo service 不生成商品、订单、政策业务数据；知识切块只来自人工上传资料。
 - 普通聊天返回知识库约束下的 AI 回复并写入 AI 调用日志。

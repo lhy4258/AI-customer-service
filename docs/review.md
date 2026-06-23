@@ -28,13 +28,10 @@
 - WebSocket 已是同一会话内的实时消息主链路；SSE `events` 仅保留为历史消息回放。
 - Vue 前端不包含登录、权限和生产级客服分配策略。
 
-## 测试计划
+## 验证计划
 
-- 核心单元测试：在 `backend/` 下运行 `uv run python -m unittest discover -s tests -v`
-- 数据摘要检查：在 `backend/` 下运行 `uv run python scripts/seed_demo_data.py`
-- 演示流程：在 `backend/` 下运行 `uv run python scripts/run_demo.py`
-- 空闲关闭脚本：在 `backend/` 下运行 `uv run python scripts/check_idle_sessions.py`
 - 前端构建：在 `frontend/` 下运行 `npm run build:customer` 和 `npm run build:support`
+- 后端启动：在 `backend/` 下运行 `.\.venv\Scripts\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000`
 
 ## Review 关注点
 

@@ -1289,13 +1289,6 @@ LIMIT 10;
 
 ## 13. 验证命令
 
-后端测试：
-
-```powershell
-cd C:\Users\36183\Desktop\working\demo1\backend
-uv run python -m unittest discover -s tests -v
-```
-
 提取正确话术：
 
 ```powershell

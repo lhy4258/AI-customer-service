@@ -2,24 +2,19 @@
 
 **Goal:** Build a simple customer-service conversation MVP.
 
-**Architecture:** Keep the FastAPI route layer thin and put deterministic, testable conversation behavior in service classes. Use an in-memory repository for local tests and demos, with optional PostgreSQL persistence for conversations, messages, handoff tickets, corrections, AI call logs, and an empty generic pgvector knowledge chunk table for future retrieval.
+**Architecture:** Keep the FastAPI route layer thin and put deterministic conversation behavior in service classes. Use an in-memory repository for lightweight demos, with optional PostgreSQL persistence for conversations, messages, handoff tickets, corrections, AI call logs, knowledge documents, and knowledge chunks.
 
-**Tech Stack:** Python 3.11+, FastAPI, Pydantic, SQLAlchemy-ready models, PostgreSQL-ready schema, Vue 3 + Vite frontend, stdlib unittest tests.
+**Tech Stack:** Python 3.11+, FastAPI, Pydantic, SQLAlchemy-ready models, PostgreSQL-ready schema, Vue 3 + Vite frontend.
 
 ---
 
-### Task 1: Conversation Domain And Tests
+### Task 1: Conversation Domain
 
 **Files:**
 
 - `backend/app/services/entities.py`
 - `backend/app/services/repository.py`
 - `backend/app/services/demo_data.py`
-- `backend/tests/test_customer_service_core.py`
-
-- [x] Test that demo service does not generate product, order, policy, or knowledge data.
-- [x] Test generic AI conversation response and AI call logging.
-- [x] Test explicit handoff, human claim/reply/close, idle close, and SQLAlchemy persistence.
 
 ### Task 2: API Layer
 
@@ -37,13 +32,11 @@
 
 **Files:**
 
-- `backend/scripts/seed_demo_data.py`
-- `backend/scripts/run_demo.py`
-- `backend/scripts/check_idle_sessions.py`
+- `backend/scripts/extract_correct_answers.py`
 - `docs/usage.md`
 - `docs/review.md`
 
-- [x] Keep scripts focused on data summary, full handoff demo, and idle close job.
+- [x] Keep only the corpus extraction script for reusable local data preparation.
 - [x] Remove `run_evals.py`.
 - [x] Document that product/order/policy data is out of scope.
 
@@ -73,5 +66,5 @@
 - `mcp/customer_service_tools.md`
 
 - [x] Keep PostgreSQL + Redis compose file.
-- [x] Keep SQLAlchemy table definitions for conversation data plus an empty generic pgvector knowledge chunk table.
+- [x] Keep SQLAlchemy table definitions for conversation data, knowledge documents, and pgvector knowledge chunks.
 - [x] Update MCP reservation document for conversation tools only.

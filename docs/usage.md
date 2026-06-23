@@ -23,12 +23,7 @@ cd C:\Users\36183\Desktop\working\demo1\backend
 uv sync
 ```
 
-## 3. 运行测试
-
-```powershell
-cd C:\Users\36183\Desktop\working\demo1\backend
-uv run python -m unittest discover -s tests -v
-```
+## 3. 技术文档
 
 AI 知识库、资料上传、混合检索和提示词防护的详细技术说明见：
 
@@ -37,40 +32,7 @@ C:\Users\36183\Desktop\working\demo1\docs\ai_knowledge_base.md
 C:\Users\36183\Desktop\working\demo1\docs\technical_guide.md
 ```
 
-## 4. 查看当前数据摘要
-
-```powershell
-cd C:\Users\36183\Desktop\working\demo1\backend
-uv run python scripts/seed_demo_data.py
-```
-
-预期包含对话和知识库相关计数：
-
-- `conversations`
-- `messages`
-- `handoff_tickets`
-- `corrections`
-- `ai_call_logs`
-- `knowledge_documents`
-- `knowledge_chunks`
-
-## 5. 运行本地演示脚本
-
-```powershell
-cd C:\Users\36183\Desktop\working\demo1\backend
-uv run python scripts/run_demo.py
-```
-
-脚本会依次演示：
-
-1. 普通 AI 客服回复。
-2. 用户显式转人工。
-3. 后台接入工单。
-4. 人工回复。
-5. 人工纠错沉淀。
-6. 人工主动结束服务。
-
-## 6. 启动 API
+## 4. 启动 API
 
 ```powershell
 cd C:\Users\36183\Desktop\working\demo1\backend
@@ -101,7 +63,7 @@ curl -X POST http://127.0.0.1:8000/api/v1/customer-service/chat `
   -d "{\"customer_id\":\"customer-002\",\"content\":\"我要转人工，人工处理\"}"
 ```
 
-## 7. 启动 Vue 前端
+## 5. 启动 Vue 前端
 
 客户聊天端：
 
@@ -138,7 +100,7 @@ http://127.0.0.1:5174
 5. 回到客户聊天端，消息会通过 WebSocket 自动出现，不需要手动刷新。
 6. 客服在工作台点击“结束服务”。
 
-## 8. PostgreSQL 与 Redis
+## 6. PostgreSQL 与 Redis
 
 项目支持两种 repository：
 

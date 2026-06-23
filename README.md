@@ -32,13 +32,6 @@
 - PostgreSQL 落库：设置 `backend/.env` 中 `REPOSITORY_BACKEND=postgres`
 - Vue 前端：`frontend/`
 
-核心测试：
-
-```powershell
-cd backend
-uv run python -m unittest discover -s tests -v
-```
-
 启动后端 API：
 
 ```powershell
