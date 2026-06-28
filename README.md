@@ -53,12 +53,20 @@ CustomerServiceFacade
 
 ```text
 demo1/
-  backend/                 FastAPI 后端、领域服务、数据库模型
+  backend/                 FastAPI 后端、领域服务、数据库模型，见 backend/README.md
   frontend/                客户聊天端和人工客服工作台
   docs/                    技术文档、架构说明、使用说明
   backend/infra/init.sql   PostgreSQL pgvector 初始化
   backend/.env.example     后端环境变量示例
 ```
+
+常用入口：
+
+- 后端说明：[backend/README.md](backend/README.md)
+- 后端配置示例：[backend/.env.example](backend/.env.example)
+- 数据库初始化：[backend/infra/init.sql](backend/infra/init.sql)
+- 客户聊天端源码：[frontend/src/views/CustomerChatView.vue](frontend/src/views/CustomerChatView.vue)
+- 人工客服工作台源码：[frontend/src/views/HumanSupportDeskView.vue](frontend/src/views/HumanSupportDeskView.vue)
 
 ## 快速启动
 
@@ -173,11 +181,11 @@ http://127.0.0.1:8000/docs
 
 ## 文档入口
 
-- 架构设计：`docs/architecture.md`
-- 使用说明：`docs/usage.md`
-- AI 知识库与混合检索：`docs/ai_knowledge_base.md`
-- 完整技术文档：`docs/technical_guide.md`
-- Review 记录：`docs/review.md`
+- 架构设计：[docs/architecture.md](docs/architecture.md)
+- 使用说明：[docs/usage.md](docs/usage.md)
+- AI 知识库与混合检索：[docs/ai_knowledge_base.md](docs/ai_knowledge_base.md)
+- 完整技术文档：[docs/technical_guide.md](docs/technical_guide.md)
+- Review 记录：[docs/review.md](docs/review.md)
 
 ## 当前边界
 
