@@ -4,6 +4,11 @@
 
 项目不接入真实商品、订单、库存或售后业务系统。对话中出现的商品、订单、退款等内容只作为聊天文本或知识库资料处理，避免把演示数据误包装成真实业务能力。
 
+## 效果展示
+<img width="1274" height="733" alt="image" src="https://github.com/user-attachments/assets/5cedbf46-3558-4e0c-9b11-10b65599537c" />
+<img width="1273" height="707" alt="image" src="https://github.com/user-attachments/assets/0ef3c552-538a-4e46-99ea-9b32a25a1e73" />
+
+
 ## 核心亮点
 
 - RAG 客服回复：基于 PostgreSQL + pgvector 保存知识切片，支持稠密向量和稀疏关键词混合检索。
